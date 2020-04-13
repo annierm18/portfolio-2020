@@ -1,10 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+
+
+import About from './components/pages/About';
+
+import FirstComponent from './components/FirstComponent';
+import NavigationContainer from "./components/NavigationContainer";
+
+
+// ReactDOM.render(<App />, document.getElementById('root'))
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+
+      <NavigationContainer />
+
+      <Switch>
+        <Route path="/about-me" component={About} />
+      </Switch>
+
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +37,11 @@ function App() {
           Learn React
         </a>
       </header>
+      {/* <FirstComponent displaytext="First Component Data"/> */}
     </div>
+    </Router>
+    
+    
   );
 }
 
