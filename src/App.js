@@ -5,6 +5,8 @@ import './App.css';
 
 
 import About from './components/pages/About';
+import Projects from './components/pages/Projects';
+import Contact from './components/pages/Contact';
 
 import FirstComponent from './components/FirstComponent';
 import NavigationContainer from "./components/NavigationContainer";
@@ -20,6 +22,14 @@ function App() {
 
       <Switch>
         <Route path="/about-me" component={About} />
+      </Switch>
+
+      <Switch>
+        <Route path="/projects" component={Projects} />
+      </Switch>
+
+      <Switch>
+        <Route path="/contact" component={Contact} />
       </Switch>
 
       <div className="App">

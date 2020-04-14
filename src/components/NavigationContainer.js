@@ -30,12 +30,16 @@ const NavigationComponent = (props) => {
                         <NavLink to ="/about-me" activeClassName="nav-link-active">About</NavLink>
                     </div>
 
+                    <div className="nav-link-wrapper">
+                        <NavLink to ="/projects" activeClassName="nav-link-active">Projects</NavLink>
+                    </div>
+
+                    <div className="nav-link-wrapper">
+                        <NavLink to ="/contact" activeClassName="nav-link-active">Contact</NavLink>
+                    </div>
+
                 </div>
 
-                <div className="right-side">
-                AINE FITZGERALD COLEMAN
-
-                </div>
             </div>
         );
     }
