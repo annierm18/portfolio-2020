@@ -33,7 +33,6 @@ function App() {
       </Switch>
 
       <div className="App">
-      <header>Test</header>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

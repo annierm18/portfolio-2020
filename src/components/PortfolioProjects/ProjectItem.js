@@ -3,6 +3,10 @@ import React, { Component } from "react";
 // import { Container, Row, Col } from "reactstrap";
 // import { Link } from 'react-router-dom';
 
+import '../../style/ProjectItem.scss';
+
+import img from '../../assets/WaterMyPlantsPhoto.png';
+
 export default class ProjectItem extends Component {
     constructor(props) {
         super(props);
@@ -22,27 +26,18 @@ export default class ProjectItem extends Component {
     // const { img, name, index } = this.props.project;
     const showBack = this.state.showBack;
 
-    const pStyle = {
-        width: "220px"
-      };
-
-      const iStyle = {
-        width: "220px",
-        paddingTop: "30px"
-      };
-
+      
     return (
-        <div>
-            <h1>Water My Plants</h1>
-            <div onClick={this.onItemClickHandler} className='plant-items-wrapper__plant'>
+        <div className='water-my-plants' >
+            <h1 className='water-my-plants__header'>Water My Plants</h1>
+            <div onClick={this.onItemClickHandler} className='water-my-plants__block'>
                 { showBack ? 
-                    <div style={iStyle}  className='plant-items-wrapper__plant__back'>
-                        <h1>Using a Raspberry Pi, Heroku, m2x IOT cloud service library, ReactJS, and Visual Studio Code, I built an application that allows users to click a button to water their plants and view live data from their plants </h1>
+                    <div className='water-my-plants__block__back'>
+                        Using a Raspberry Pi, Heroku, m2x IOT cloud service library, ReactJS, and Visual Studio Code, I built an application that allows users to click a button to water their plants and view live data from their plants
                     </div>
                 :
-                    <div onClick={this.onItemClickHandler} className='plant-items-wrapper__plant__front'>
-                        {/* <img src={img} alt="plant" className='plant-items-wrapper__plant__front__plant-image'/> */}
-                        <p>img placeholder</p>
+                    <div onClick={this.onItemClickHandler} className='water-my-plants'>
+                        <img src={img} alt="plant" className='water-my-plants__block__image'/>
                     </div>
                 }  
                 {/* <div className='plant-items-wrapper__plant__button'>
